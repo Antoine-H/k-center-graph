@@ -1,0 +1,263 @@
+\documentclass[sigconf]{acmart}
+
+\renewcommand{\baselinestretch}{1.02}
+
+\usepackage{hyperref}
+%\usepackage[margin=1in]{geometry}
+\usepackage{latexsym,graphicx,amssymb}
+\usepackage{amsfonts, amssymb,amsthm}
+%\usepackage{amsmath,enumerate}
+%\usepackage{wrapfig}
+%\usepackage{subfigure}
+%\usepackage{float}
+%\usepackage{psfig}
+%\usepackage{epsfig}
+\usepackage{xspace}
+\usepackage{paralist}
+%\usepackage{times}
+%\usepackage[compact]{titlesec}
+%\usepackage[boxed,lined]{algorithm2e}
+%\usepackage{enumerate}
+%\usepackage{cases}
+%\usepackage{caption}
+\usepackage{url}
+%\usepackage{tikz}
+%\usetikzlibrary{arrows}
+%\usetikzlibrary{topaths,calc}
+%\usepackage{booktabs}
+\usepackage{mathtools}
+\usepackage[autolanguage,np]{numprint}
+
+%\usepackage{flushend}  This causes an error sometimes.
+
+\usepackage{color}
+%\newcommand{\maxi}[1]{\textcolor{magenta}{#1}}
+\newcommand{\maxi}[1]{\textcolor{magenta}{#1}}
+\newcommand{\tocheck}[1]{\textcolor{cyan}{#1}}
+%\definecolor{Darkblue}{rgb}{0,0,0.4}
+%\definecolor{Brown}{cmyk}{0,0.81,1.,0.60}
+%\definecolor{Purple}{cmyk}{0.45,0.86,0,0}
+%%\usepackage[breaklinks]{hyperref}
+%\hypersetup{colorlinks=true,%pdfborder={1 1 1 [3]},%
+%citebordercolor={.6 .6 .6},linkbordercolor={.6 .6 .6},%
+%citecolor=black,urlcolor=black,linkcolor=black,pagecolor=black}
+%\newcommand{\lref}[2][]{\hyperref[#2]{#1~\ref*{#2}}}
+
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\algloopdefx[loop]{Iterate}
+[1][]{{\bf iterate} }
+
+\usepackage{comment}
+
+%\newenvironment{proof}{{\bf Proof:  }}{\hfill\rule{2mm}{2mm}}
+%\newenvironment{proofof}[1]{{\bf Proof of #1:  }}{\hfill\rule{2mm}{2mm}}
+
+%\numberwithin{figure}{section}
+%\numberwithin{equation}{section}
+%\newtheorem{theorem}{Theorem}[section]
+%
+%%\newtheorem{remark}[theorem]{Remark}
+%\newtheorem{corollary}[theorem]{Corollary}
+%\newtheorem{lemma}[theorem]{Lemma}
+%
+%\newtheorem{claim}[theorem]{Claim}
+%\newtheorem{fact}[theorem]{Fact}
+%\newtheorem{observation}[theorem]{Observation}
+
+\theoremstyle{definition}
+%\newtheorem{definition}[theorem]{Definition}
+
+%\newtheorem{example}[theorem]{Example}
+
+%\newtheorem{proposition}{\hskip\parindent Proposition}[section]
+%\newtheorem*{prop}{Proposition}
+%\newtheorem*{lem}{Lemma}
+
+%\renewcommand{\theequation}{\thesection.\arabic{equation}}
+%\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+
+%\newcommand{\qed}{\hfill$\Box$}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+\newcommand{\eps}{\epsilon}
+
+\newcommand{\ve}{\varepsilon}
+\newcommand{\vp}{\varphi}
+\newcommand{\B}{\mathbf{B}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\E}{\ensuremath{\mathbb{E}}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\p}{\mathcal{P}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\ceil}[1]{\ensuremath{\lceil #1 \rceil}}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\dimV}{\dim_V}
+\newcommand{\poly}{\operatorname{poly}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\spn}{\operatorname{span}}
+\newcommand{\TIME}{\ensuremath{\mathsf{TIME}}\xspace}
+\newcommand{\TSP}{\ensuremath{\mathsf{TSP}}\xspace}
+\newcommand{\TSPN}{\ensuremath{\mathsf{TSPN}}\xspace}
+\newcommand{\OPT}{\ensuremath{\mathsf{OPT}}\xspace}
+\newcommand{\MST}{\ensuremath{\mathsf{MST}}\xspace}
+\newcommand{\T}{\ensuremath{\mathsf{T}}\xspace}
+
+\newcommand{\Exp}{\ensuremath{\mathsf{Exp}}\xspace}
+\newcommand{\ALG}{\ensuremath{\mathsf{ALG}}\xspace}
+\newcommand{\DP}{\ensuremath{\mathsf{DP}}\xspace}
+
+\newcommand{\W}{\ensuremath{\mathsf{W}}\xspace}
+\newcommand{\Wm}{\ensuremath{\mathsf{W}^{-1}}\xspace}
+
+\newcommand{\Wh}{\ensuremath{\mathsf{W}^{\frac{1}{2}}}\xspace}
+
+\newcommand{\Wmh}{\ensuremath{\mathsf{W}^{-\frac{1}{2}}}\xspace}
+
+\newcommand{\Lo}{\ensuremath{\mathsf{L}\xspace}}
+\newcommand{\Lc}{\ensuremath{\mathcal{L}}\xspace}
+
+\newcommand{\D}{\ensuremath{\mathcal{D}\xspace}}
+
+\newcommand{\Dc}{\ensuremath{\mathcal{D}}\xspace}
+
+\newcommand{\ray}{\ensuremath{\mathsf{R}}\xspace}
+\newcommand{\rayc}{\ensuremath{\mathcal{R}}\xspace}
+
+\newcommand{\Ito}{It\={o}\xspace}
+
+\newcommand{\norm}[1]{\ensuremath{\| #1 \|}}
+
+\newcommand{\Diam}{\ensuremath{\mathsf{Diam}}}
+\newcommand{\expct}[1]{\ensuremath{\text{{\bf E}$\left[#1\right]$}}}
+
+\newcommand{\sgn}{\operatorname{sgn}}
+
+\newcommand{\txts}{\textstyle}
+\newcommand{\LP}{\ensuremath{\mathsf{LP}}}
+%\newcommand{\DP}{\ensuremath{\mathsf{DP}}}
+\newcommand{\LPn}{\ensuremath{\mathsf{LP}_n}}
+\newcommand{\LPm}{\ensuremath{\mathsf{LP}_m}}
+\newcommand{\LPi}{\ensuremath{\mathsf{LP}_\infty}}
+\newcommand{\LDi}{\ensuremath{\mathsf{LD}_\infty}}
+\newcommand{\CP}{\ensuremath{\mathsf{CP}}}
+\newcommand{\CD}{\ensuremath{\mathsf{CD}}}
+
+\newcommand{\floor}[1]{\ensuremath{\lfloor #1 \rfloor}}
+
+\newcommand{\ra}{\rightarrow}
+
+\newcommand{\Un}{\ensuremath{\mathcal{U}}}
+
+\newcommand{\ts}{\textstyle}
+\newcommand{\ds}{\displaystyle}
+
+\newcounter{note}[section]
+\renewcommand{\thenote}{\thesection.\arabic{note}}
+
+\newcounter{myLISTctr}
+\newcommand{\initOneLiners}{%
+\setlength{\itemsep}{0pt}
+	\setlength{\parsep }{0pt}
+	\setlength{\topsep }{0pt}
+	%      \usecounter{myLISTctr}
+}
+\newenvironment{OneLiners}[1][\ensuremath{\bullet}]
+	{\begin{list}
+		{#1}
+		{\initOneLiners}}
+	{\end{list}}
+
+\newcommand{\ignore}[1]{}
+\newcommand{\longv}[1]{}
+
+\newcommand{\algo}[1]{\text{\sf #1}}
+
+\newcommand*\samethanks[1][\value{footnote}]{\footnotemark[#1]}
+
+\newcommand{\toappendix}[1]{\refstepcounter{note}$\ll${\sf Move to
+Appendix:} {\sf \textcolor{red}{#1}}$\gg${\tiny\bf App~\thenote}}
+
+\newcommand{\mauro}[1]{\refstepcounter{note}$\ll${\sf Mauro's
+Comment~\thenote:} {\sf \textcolor{blue}{#1}}$\gg${\tiny\bf MS~\thenote}}
+
+\newcommand{\hubert}[1]{{\footnotesize\color{red}[Hubert: #1]}}
+
+\newcommand{\arnaud}[1]{\refstepcounter{note}$\ll${\sf Arnaud's
+Comment~\thenote:} {\sf \textcolor{purple}{#1}}$\gg${\tiny\bf MS~\thenote}}
+
+\newcommand{\FD}{\textsc{FullyDynamic}}
+\newcommand{\SW}{\textsc{SlidingWindow}}
+\newcommand{\f}{\textsc{FD}}
+\newcommand{\s}{\textsc{SW}}
+
+\fancyhead{}
+
+\begin{document}
+
+\title{Fully Dynamic $k$-Center Clustering on graphs}
+
+\author{Name}
+\authornote{Note}
+\affiliation{%
+	\institution{Institution}
+	%\streetaddress{P.O. Box 1212}
+	%\city{Dublin}
+	%\state{Ohio}
+	%\postcode{43017-6221}
+}
+\email{email}
+
+
+\begin{abstract}
+	Static and dynamic clustering algorithms are a fundamental tool in any
+	machine learning library. Most of the efforts in developing dynamic machine
+	learning and data mining algorithms have been focusing on the sliding
+	window model (where at any given point in time only the most recent data
+	items are retained) or more simplistic models. However, in many real-world
+	applications one might need to deal with arbitrary deletions and
+	insertions. For example, one might need to remove data items that are not
+	necessarily the oldest ones, because they have been flagged as containing
+	inappropriate content or due to privacy concerns. Clustering trajectory
+	data might also require to deal with more general update operations.
+
+	We develop a $(2+\epsilon)$-approximation algorithm for the $k$-center
+	clustering problem with ``small'' amortized cost under the fully dynamic
+	adversarial model. In such a model, points can be added or removed
+	arbitrarily, provided that the adversary does not have access to the random
+	choices of our algorithm.  The amortized cost of our algorithm is
+	poly-logarithmic when the ratio between the maximum and minimum distance
+	between any two points in input is bounded by a polynomial, while $k$ and
+	$\epsilon$ are constant. Our theoretical results are complemented with an
+	extensive experimental evaluation on dynamic data from Twitter, Flickr, as
+	well as trajectory data, demonstrating the effectiveness of our approach.
+\end{abstract}
+
+%\copyrightyear{2018}
+%\acmYear{2018}
+%\setcopyright{iw3c2w3}
+%\acmConference[WWW 2018]{The 2018 Web Conference}{April 23--27, 2018}{Lyon, France}
+%\acmBooktitle{WWW 2018: The 2018 Web Conference, April 23--27, 2018, Lyon, France}
+%\acmPrice{}
+%\acmDOI{10.1145/3178876.3186124}
+%\acmISBN{978-1-4503-5639-8/18/04}
+
+\maketitle
+
+%\input{intro.tex}
+\input{related.tex}
+%\input{preliminaries.tex}
+%\input{algorithm.tex}
+%\input{analysis.tex}
+%\input{experiments.tex}
+%\input{conclusion.tex}
+
+\bibliographystyle{abbrv}
+\bibliography{biblio}
+\end{document}
+
+\end{document}
+

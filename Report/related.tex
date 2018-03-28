@@ -1,0 +1,33 @@
+\section{RELATED WORK}
+	%General case
+	In their article from 2004, Demetrescu and Italiano present an algorithm
+	for the all pairs shortest paths problem. It works with a general graph
+	with non-negative real-valued edge weights and supports any sequence of
+	operations for an amortized running time of $O(n^2 log^3 n)$ per update.
+
+	%$O(n^2 log n)$ for increase only. Worth mentioning?
+
+	An algorithm maintaining a distance matrix will work in $\Omega(n^2)$ as
+	for each update, at most $n^2$ paths are changed. The above algorithm is
+	thus essentially optimal.
+
+	In 2017, Abraham, Chechik and Krinninger came up with an algorithm taking a
+	directed weighted graph with no unweighted cycles as input, against an
+	adaptive online adversary, working in $O(n^{2 + \frac{2}{3}}
+	log^{\frac{4}{3}}n)$.
+
+	%Planar case
+	Other results for specific classes of graphs exist. In 1995, Henzinger,
+	Klein, Rao and Subramanian found a data structure handling planar graphs in
+	$O(n^{\frac{9}{7}} log D)$ per operation plus a preprocessing time of
+	$O(n^{\frac{10}{7}})$. An operation being a query, an edge deletion an adge
+	addition or chanching lenths. $D$ being an upper bound on the sum of the
+	absolute-values of the negative edge-lengths.
+	%Let G be an n-node planar directed graph G such that the sum of the
+	%absolute-values of the negative edge-lengths is at most D. The
+	%preprocessing to create the data structure from G is
+	%$O(n^{\frac{10}{7}})$. The space required by the data structure is $O(n)$.
+	%The time per operation is $O(n^{\frac{9}{7}} log D)$. The time bound for
+	%queries, edge-deletion, and changing lengths is worst-case while the time
+	%for adding edges is amortized.
+
